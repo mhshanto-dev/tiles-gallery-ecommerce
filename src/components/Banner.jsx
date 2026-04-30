@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="bg-[url('/tiles-gallery.png')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
+    <div className="bg-[url('/tiles-gallery.png')] h-[70vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
       
       {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
