@@ -1,0 +1,100 @@
+{
+  "tiles": [
+    {
+      "id": "tile_001",
+      "title": "Ceramic Blue Tile",
+      "description": "Premium ceramic tile with glossy blue finish",
+      "image": "https://i.ibb.co/8Xb1f1K/tile1.jpg",
+      "category": "ceramic",
+      "price": 45.99,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_002",
+      "title": "Modern White Porcelain",
+      "description": "Elegant white porcelain tile for modern homes",
+      "image": "https://i.ibb.co/0r9dK7X/tile2.jpg",
+      "category": "porcelain",
+      "price": 55.99,
+      "currency": "USD",
+      "dimensions": "80x80 cm",
+      "material": "Porcelain",
+      "inStock": true
+    },
+    {
+      "id": "tile_003",
+      "title": "Luxury Marble Grey",
+      "description": "High-end marble tile with grey texture",
+      "image": "https://i.ibb.co/Vj3v9Tq/tile3.jpg",
+      "category": "marble",
+      "price": 75.5,
+      "currency": "USD",
+      "dimensions": "100x100 cm",
+      "material": "Marble",
+      "inStock": true
+    },
+    {
+      "id": "tile_004",
+      "title": "Granite Black Stone",
+      "description": "Durable granite tile for heavy use",
+      "image": "https://i.ibb.co/3p7fY6W/tile4.jpg",
+      "category": "granite",
+      "price": 65.0,
+      "currency": "USD",
+      "dimensions": "60x120 cm",
+      "material": "Granite",
+      "inStock": false
+    },
+    {
+      "id": "tile_005",
+      "title": "Glass Mosaic Shine",
+      "description": "Shiny glass mosaic tile for stylish walls",
+      "image": "https://i.ibb.co/W5Zz9hF/tile5.jpg",
+      "category": "glass",
+      "price": 35.75,
+      "currency": "USD",
+      "dimensions": "30x30 cm",
+      "material": "Glass",
+      "inStock": true
+    },
+    {
+      "id": "tile_006",
+      "title": "Colorful Mosaic Mix",
+      "description": "Vibrant mosaic tiles with mixed colors",
+      "image": "https://i.ibb.co/6ZpZy0K/tile6.jpg",
+      "category": "mosaic",
+      "price": 40.25,
+      "currency": "USD",
+      "dimensions": "30x30 cm",
+      "material": "Mosaic",
+      "inStock": true
+    },
+    {
+      "id": "tile_007",
+      "title": "Matte Ceramic Beige",
+      "description": "Soft beige ceramic tile with matte finish",
+      "image": "https://i.ibb.co/7y8L2Yp/tile7.jpg",
+      "category": "ceramic",
+      "price": 42.0,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_008",
+      "title": "Polished Marble White",
+      "description": "Bright white polished marble tile",
+      "image": "https://i.ibb.co/2k9xkqR/tile8.jpg",
+      "category": "marble",
+      "price": 85.99,
+      "currency": "USD",
+      "dimensions": "100x100 cm",
+      "material": "Marble",
+      "inStock": true
+    }
+  ]
+}
