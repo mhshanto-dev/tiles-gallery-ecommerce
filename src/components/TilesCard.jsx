@@ -1,20 +1,3 @@
-// import Image from "next/image";
-
-// const TilesCard = ({ tile }) => {
-//   return (
-//     <div className="relative w-full h-[250px] rounded-lg overflow-hidden border border-gray-200">
-//       <Image
-//         src={tile.image}
-//         alt={tile.title}
-//         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-//         priority={true} 
-//         className="object-cover"
-//       />
-//     </div>
-//   );
-// };
-
-// export default TilesCard;
 
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
@@ -22,7 +5,8 @@ import Link from "next/link";
 
 const TilesCard = ({ tile }) => {
   return (
-    <Card className="border">
+    <div>
+      <Card className="border">
       <div className="relative w-full h-[250px] rounded-lg overflow-hidden border border-gray-200">
       <Image
         src={tile.image}
@@ -32,22 +16,24 @@ const TilesCard = ({ tile }) => {
         priority={true} 
         className="object-cover"
       />
-      <Chip size="large" className="absolute right-2 top-2 text-xl bg-amber-100">{tile.category}</Chip>
+      <Chip size="large" className="absolute right-2 top-2 bg-white/80 backdrop-blur-md text-slate-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-200 shadow-sm">{tile.category}</Chip>
     </div>
     <div>
-      <h2 className="font-semibold text-xl">{tile.title}</h2>
+      <h2 className="text-lg font-bold text-slate-900 mb-1">{tile.title}</h2>
     </div>
    <div className="flex items-center justify-between">
      <div>
-      <p className="font-bold text-gray-700">${tile.price}</p>
+      <p className="text-blue-600 font-extrabold text-xl">${tile.price}</p>
     </div>
 
     <div>
-      <Link href={`/all-tiles/${tile.id}`}><Button className="font-bold bg-amber-700">View Details</Button></Link>
+      <Link href={`/all-tiles/${tile.id}`}><Button className="bg-[#0f172a] text-white hover:bg-slate-800 px-6 py-2 rounded-full transition-all duration-300 text-sm font-medium">View Details</Button></Link>
     </div>
+    
    </div>
 
     </Card>
+    </div>
   );
 };
 

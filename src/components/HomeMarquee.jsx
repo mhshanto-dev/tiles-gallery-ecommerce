@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const HomeMarquee = () => {
   return (
-    <div className="bg-neutral-500 py-3 text-white font-medium overflow-hidden rounded-xl">
+    <div className="bg-[#0f172a] py-2 text-slate-200 text-sm text-white font-semibold">
       <Marquee speed={50} gradient={false} pauseOnHover={true}>
         <span className="mx-10">
            New Arrivals: <span className="font-bold">Marble Elegance Tile</span>

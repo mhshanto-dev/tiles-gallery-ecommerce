@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-24 border-t border-gray-200 dark:border-white/10 container mx-auto">
+    <footer className="relative mt-24 dark:border-white/10 container mx-auto bg-slate-50 border-t border-slate-200 py-12">
       <div className="absolute inset-0 -z-10 bg-white dark:bg-[#0a0a0b]" />
 
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -40,28 +40,28 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <Link
                 href="https://www.facebook.com/mehedi.hasan.shanto.dev"
-                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
+                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110  text-slate-600 hover:text-blue-600 transition-colors"
               >
                 <FaFacebookF />
               </Link>
 
               <Link
                 href="https://x.com/mhshanto8989"
-                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
+                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 text-slate-600 hover:text-blue-600 transition-colors"
               >
                 <FaTwitter />
               </Link>
 
               <Link
                 href="https://github.com/mhshanto-dev"
-                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
+                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 text-slate-600 hover:text-blue-600 transition-colors"
               >
                 <FaGithub />
               </Link>
 
               <Link
                 href="https://www.linkedin.com/in/mehedi-hasan-shanto-dev/"
-                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
+                className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 text-slate-600 hover:text-blue-600 transition-colors"
               >
                 <FaLinkedinIn />
               </Link>
@@ -69,7 +69,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-12 text-center text-xs text-gray-500 dark:text-gray-400">
           © {new Date().getFullYear()} Tilers Gallery. All rights reserved.
         </div>
