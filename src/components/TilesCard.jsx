@@ -42,7 +42,7 @@ const TilesCard = ({ tile }) => {
     </div>
 
     <div>
-      <Button className="font-bold text-gray-700">View Details</Button>
+      <Button className="font-bold bg-amber-700">View Details</Button>
     </div>
    </div>
 
