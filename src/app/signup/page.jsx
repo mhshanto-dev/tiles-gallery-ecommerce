@@ -22,8 +22,12 @@ export default function SignUpPage() {
     // console.log(name, image, email, password)
     const {data, error} = await authClient.signUp.email({
       name,email,password,image,
-    })
+    });
+    if(error){
+      return toast.error(error.message || "something went Wrong");
+    }
     console.log({data, error})
+    toast.success("Account created successfully!"); 
   };
 
   return (
