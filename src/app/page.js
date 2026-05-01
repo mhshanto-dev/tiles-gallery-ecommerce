@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Banner/>
       <FeaturedTiles/>
-      <h1>Hey! react full stack projects.</h1>
+      
     </div>
   );
 }
