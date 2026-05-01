@@ -7,8 +7,6 @@ const AllTilesPage = async () => {
     { cache: "no-store" } 
      
   );
-
-
   const data = await res.json();
   console.log(data)
   

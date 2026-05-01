@@ -18,6 +18,7 @@
 
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const TilesCard = ({ tile }) => {
   return (
@@ -42,7 +43,7 @@ const TilesCard = ({ tile }) => {
     </div>
 
     <div>
-      <Button className="font-bold bg-amber-700">View Details</Button>
+      <Link href={`/all-tiles/${tile.id}`}><Button className="font-bold bg-amber-700">View Details</Button></Link>
     </div>
    </div>
 
