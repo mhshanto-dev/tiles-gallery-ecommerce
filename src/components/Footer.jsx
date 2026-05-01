@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
-          {/* Contact Us */}
+          
           <div className="space-y-4">
             <h2 className="text-lg font-semibold text-black dark:text-white">
               Contact Us
@@ -19,8 +19,8 @@ const Footer = () => {
             </p>
 
             <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <p>Email: support@pixgen.com</p>
-              <p>Phone: +880 1234-567890</p>
+              <p>Email:mhshanto.8989.t@gmail.com</p>
+              <p>Phone: +880 1516504272</p>
             </div>
 
             <Link
@@ -39,28 +39,28 @@ const Footer = () => {
 
             <div className="flex items-center gap-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/mehedi.hasan.shanto.dev"
                 className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
               >
                 <FaFacebookF />
               </Link>
 
               <Link
-                href="#"
+                href="https://x.com/mhshanto8989"
                 className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
               >
                 <FaTwitter />
               </Link>
 
               <Link
-                href="#"
+                href="https://github.com/mhshanto-dev"
                 className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
               >
                 <FaGithub />
               </Link>
 
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/mehedi-hasan-shanto-dev/"
                 className="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:scale-110 transition"
               >
                 <FaLinkedinIn />
