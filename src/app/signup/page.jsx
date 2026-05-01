@@ -1,6 +1,8 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { Toaster, toast } from "sonner";
+import { useRouter } from "next/navigation"; 
 import {
   Button,
   Card,
@@ -13,29 +15,40 @@ import {
 } from "@heroui/react";
 
 export default function SignUpPage() {
+  const router = useRouter(); 
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log(name, image, email, password)
-    const {data, error} = await authClient.signUp.email({
-      name,email,password,image,
+
+    const { data, error } = await authClient.signUp.email({
+      name,
+      email,
+      password,
+      image,
     });
-    if(error){
+
+    if (error) {
       return toast.error(error.message || "something went Wrong");
     }
-    console.log({data, error})
-    toast.success("Account created successfully!"); 
+
+    toast.success("Signup successfully!");
+
+    
+    setTimeout(() => {
+      router.push("/signin");
+    }, 1500);
   };
 
   return (
     <Card className="border mx-auto w-[420px] py-8 px-6 mt-10 shadow-lg rounded-2xl">
+      <Toaster position="top-center" richColors />
       <h1 className="text-center text-2xl font-bold mb-6">Sign Up</h1>
 
       <Form className="flex w-full flex-col gap-5" onSubmit={onSubmit}>
-        
         <TextField isRequired name="name" type="text">
           <Label className="text-sm font-medium">Name</Label>
           <Input placeholder="Enter your name" className="rounded-lg" />
@@ -83,7 +96,11 @@ export default function SignUpPage() {
           }}
         >
           <Label className="text-sm font-medium">Password</Label>
-          <Input placeholder="Enter your password" className="rounded-lg" />
+          <Input
+            placeholder="Enter your password"
+            type="password"
+            className="rounded-lg"
+          />
           <Description className="text-xs text-gray-500">
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
@@ -107,7 +124,6 @@ export default function SignUpPage() {
             Reset
           </Button>
         </div>
-
       </Form>
     </Card>
   );

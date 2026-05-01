@@ -1,13 +1,17 @@
 import Banner from "@/components/Banner";
 import FeaturedTiles from "@/components/FeaturedTiles";
-import Image from "next/image";
+import HomeMarquee from "@/components/HomeMarquee";
 
-export default function Home() {
+
+export default function HomePage() {
   return (
-    <div>
-      <Banner/>
-      <FeaturedTiles/>
+    <main>
+      <HomeMarquee /> 
       
-    </div>
+      <div className="container mx-auto px-4">
+        <FeaturedTiles />
+      </div>
+    </main>
   );
 }
+
