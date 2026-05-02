@@ -7,6 +7,7 @@ export default function HomePage() {
   return (
     <main>
       <HomeMarquee /> 
+      <Banner/> 
       
       <div className="container mx-auto px-4">
         <FeaturedTiles />
