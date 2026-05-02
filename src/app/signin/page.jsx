@@ -2,7 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Toaster, toast } from "sonner";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import {
   Button,
   Card,
@@ -16,12 +16,16 @@ import {
 import { GrGoogle } from "react-icons/gr";
 
 export default function SignIn() {
-  const router = useRouter(); 
+  const router = useRouter();
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+
+    // ✅ FIX: correct way to get values from HeroUI Form
+    const formData = new FormData(e.currentTarget);
+
+    const email = formData.get("email");
+    const password = formData.get("password");
 
     const { data, error } = await authClient.signIn.email({
       email,
@@ -32,25 +36,23 @@ export default function SignIn() {
       return toast.error(error.message || "Something went wrong");
     }
 
-    console.log({ data, error });
     toast.success("Login successful!");
 
-    
     setTimeout(() => {
       router.push("/");
     }, 1500);
   };
 
-  const handleGoogleSignIn = async () =>{
+  const handleGoogleSignIn = async () => {
     await authClient.signIn.social({
-      provider: 'google'
-    })
-
-  }
+      provider: "google",
+    });
+  };
 
   return (
     <Card className="border mx-auto w-[420px] py-8 px-6 mt-10 shadow-lg rounded-2xl">
       <Toaster position="top-center" richColors />
+
       <h1 className="text-center text-2xl font-bold mb-6">Sign In</h1>
 
       <Form className="flex w-full flex-col gap-5" onSubmit={onSubmit}>
@@ -59,14 +61,20 @@ export default function SignIn() {
           name="email"
           type="email"
           validate={(value) => {
-            if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
+            if (
+              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
+            ) {
               return "Please enter a valid email address";
             }
             return null;
           }}
         >
           <Label className="text-sm font-medium">Email</Label>
-          <Input placeholder="john@example.com" className="rounded-lg" />
+          <Input
+            name="email"
+            placeholder="john@example.com"
+            className="rounded-lg"
+          />
           <FieldError />
         </TextField>
 
@@ -89,7 +97,12 @@ export default function SignIn() {
           }}
         >
           <Label className="text-sm font-medium">Password</Label>
-          <Input placeholder="Enter your password" type="password" className="rounded-lg" />
+          <Input
+            name="password"
+            placeholder="Enter your password"
+            type="password"
+            className="rounded-lg"
+          />
           <Description className="text-xs text-gray-500">
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
@@ -114,8 +127,13 @@ export default function SignIn() {
           </Button>
         </div>
       </Form>
+
       <p className="text-center text-2xl text-blue-500">OR</p>
-      <Button onClick={handleGoogleSignIn} className={'w-full'}><GrGoogle/>Sign In With Google</Button>
+
+      <Button onClick={handleGoogleSignIn} className="w-full">
+        <GrGoogle />
+        Sign In With Google
+      </Button>
     </Card>
   );
 }
