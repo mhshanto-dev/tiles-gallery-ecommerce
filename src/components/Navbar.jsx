@@ -228,6 +228,12 @@ const Navbar = () => {
           <Link href="/" onClick={() => setMenuOpen(false)} className="text-slate-900 hover:text-blue-700 font-bold tracking-wide transition-all duration-200">
             Home
           </Link>
+
+          <Link href="/contact" onClick={() => setMenuOpen(false)} className="text-slate-900 hover:text-blue-700 font-bold tracking-wide transition-all duration-200">
+            Contact
+          </Link>
+
+
           <Link href="/all-tiles" onClick={() => setMenuOpen(false)} className="text-slate-900 hover:text-blue-700 font-bold tracking-wide transition-all duration-200">
             All Tiles
           </Link>

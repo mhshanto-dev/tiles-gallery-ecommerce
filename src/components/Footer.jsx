@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <Link
-              href="/signup"
+              href="/contact"
               className="inline-block mt-2 text-sm font-medium text-black dark:text-white hover:underline"
             >
               Go to Contact Page →

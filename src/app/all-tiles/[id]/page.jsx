@@ -29,7 +29,7 @@ const TilseDetailsPage = async ({ params }) => {
               className="rounded-lg w-full object-cover"
             />
 
-            <Link href="/signup">
+            <Link href="/contact">
               <button className="bg-blue-400 text-white px-5 py-2 rounded-lg mt-4 hover:bg-blue-400">
                 Order Now
               </button>
