@@ -58,7 +58,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href={"/my-profile"}
+              href={"/profile"}
               className="text-slate-900 hover:text-blue-700 font-bold tracking-wide transition-all duration-200"
             >
               My Profile
