@@ -4,12 +4,24 @@ import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import {Avatar} from "@heroui/react";
+import { Outfit } from 'next/font/google';  
+import { toast } from "sonner";  
 
 const Navbar = () => {
   const userData = authClient.useSession();
   // console.log(userData);
   const user = userData.data?.user;
   // console.log(user)
+
+  const handleLogout = async () => {
+    try {
+      await authClient.signOut(); 
+       toast.success("Logout successful");
+    } catch (error) {
+      toast.error("Logout failed!");
+      // console.error("Logout failed:", error);
+    }
+  };
   return (
     <div className="border-b px-2 container mx-auto">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
@@ -67,19 +79,32 @@ const Navbar = () => {
               </li>
               <li className="border-2 border-[#0f172a] text-[#0f172a] px-6 py-2 rounded-full font-bold hover:bg-[#0f172a] hover:text-white transition-all">
                 <Link href={"/signin"}>
-                  <button>SignIn</button>
+                  <button>Login</button>
                 </Link>
               </li>
             </ul> )}
 
             {
-              user && <div>
-                <Avatar>
-        <Avatar.Image alt="John Doe" src="https://img.heroui.chat/image/avatar?w=400&h=400&u=3" />
-        <Avatar.Fallback>JD</Avatar.Fallback>
+              user && (<div className="flex gap-4">
+                <Avatar size="sm">
+        <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy= "no-referrer" />
+        <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
       </Avatar>
+
+          <Button
+                onClick={handleLogout}
+                size="sm"
+                className="
+                  bg-red-600 
+                  hover:bg-red-700 
+                  text-white 
+                  font-semibold
+                "
+              >
+                Logout
+              </Button>
               </div>
-            }
+            )}
         </div>
       </nav>
     </div>
