@@ -17,9 +17,16 @@ export function UpdateUserModal() {
             name,
             image,
         })
-    }
+    };
+     const handleLogout = async () => {
+    await authClient.signOut();
+  };
   return (
-    <Modal>
+    <div className="flex gap-2">
+      <Button variant="secondary" onClick={handleLogout}>
+        LogOut
+      </Button>
+      <Modal>
       <Button variant="secondary"><Edit></Edit>Update Profile</Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
@@ -30,6 +37,7 @@ export function UpdateUserModal() {
                 <BiUser className="size-5" />
               </Modal.Icon>
               <Modal.Heading>Update User</Modal.Heading>
+              
         
             </Modal.Header>
             <Modal.Body className="p-6">
@@ -57,5 +65,6 @@ export function UpdateUserModal() {
         </Modal.Container>
       </Modal.Backdrop>
     </Modal>
+    </div>
   );
 }
