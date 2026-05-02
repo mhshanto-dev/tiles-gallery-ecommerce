@@ -1,6 +1,6 @@
 Project Name : Tiles Gallery Ecommerce
- Live Link
-Check out the live application here: https://tiles-gallery-ecommerce.vercel.app/
+Live Link
+Check out the live application here:    https://tiles-gallery-ecommerce.vercel.app/
 
 Home Page
 Banner with "Discover Your Perfect Aesthetic"
@@ -26,7 +26,7 @@ heroui
 Contact
 Project Lead: MH Shanto
 Email: mhshanto.8989.t@gmail.com
-Phone: +880 1516504272
+Phone: +880 15165042
 
 
 Image Consistency
