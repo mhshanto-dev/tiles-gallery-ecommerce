@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Name : Tiles Gallery Ecommerce
+ Live Link
+Check out the live application here: https://tiles-gallery-ecommerce.vercel.app/
 
-## Getting Started
+Home Page
+Banner with "Discover Your Perfect Aesthetic"
+Marquee section (new arrivals & updates)
+Featured Tiles (Top 4 from server)
+"Browse Now" button → All Tiles page
 
-First, run the development server:
+Next.js App Router
+Signup/Login page 
+logout page 
+profile
+Auth client integration 
+Deployment 
 
-```bash
+Tech Stack
+Frontend: React.js / Next.js (Change as per your project)
+Styling: Tailwind CSS / CSS Modules
+Deployment: Vercel
+Design Inspiration: Modern Minimalist Aesthetic
+API Integration
+heroui 
+
+Contact
+Project Lead: MH Shanto
+Email: mhshanto.8989.t@gmail.com
+Phone: +880 1516504272
+
+
+Image Consistency
+Price Formatting
+Activate Windows Watermark
+**Frontend Framework:** Next.js / React (for fast, SEO-friendly rendering)
+**Authentication:** Firebase Auth or NextAuth.js (as seen with the "Logout" and "My Profile" features).
+**Styling:** Tailwind CSS (for the responsive grid layout and modern hero section).
+User Authentication: Since the "Logout" button and profile picture are visible, your project requires a Backend/Database (MongoDB) to store user sessions.
+
+
+Home banner
+Marquee
+Featured tiles (top 4)
+Search functionality
+Tile details page
+Responsive design
+name update
+image update
+loading spinner
+error handling
+/not-found
+
+
+
+npx create-next-app@latest 
+cd my-app
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npm i @heroui/styles @heroui/react
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+{
+  "name": "tiles-gallery-ecommerce",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@better-auth/mongo-adapter": "^1.6.9",
+    "@gravity-ui/icons": "^2.18.0",
+    "@heroui/react": "^3.0.3",
+    "@heroui/styles": "^3.0.3",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "better-auth": "^1.6.9",
+    "lucide-react": "^1.14.0",
+    "mongodb": "^7.2.0",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-aria": "^3.48.0",
+    "react-aria-components": "^1.17.0",
+    "react-dom": "19.2.4",
+    "react-fast-marquee": "^1.6.5",
+    "react-icons": "^5.6.0",
+    "react-stately": "^3.46.0",
+    "sonner": "^2.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4"
+  }
+}
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
