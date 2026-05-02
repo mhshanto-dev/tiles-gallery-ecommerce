@@ -49,6 +49,9 @@ image update
 loading spinner
 error handling
 /not-found
+tiles search 
+contact page
+
 
 
 
