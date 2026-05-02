@@ -22,13 +22,3 @@ export const auth = betterAuth({
 });
 
 
-
-
-// Project info
-// Project name
-// tiles-gallery-ecommerce
-// Project number
-// 990587217902
-// Project ID
-// tiles-gallery-ecommerce
-
