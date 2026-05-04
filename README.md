@@ -26,7 +26,7 @@ heroui
 Contact
 Project Lead: MH Shanto
 Email: mhshanto.8989.t@gmail.com
-Phone: +880 15165042
+Phone: +880 1516504272
 
 
 Image Consistency
