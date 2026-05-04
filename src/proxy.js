@@ -32,47 +32,17 @@
 
 
 
-// import { NextResponse } from 'next/server';
-// import { auth } from './lib/auth'; 
-
-// export async function proxy(request) {
-//     try {
-       
-//         const session = await auth.api.getSession({
-//             headers: request.headers 
-//         });
-
-//         if (!session && (request.nextUrl.pathname === '/profile' || request.nextUrl.pathname === '/all-tiles')) {
-//             return NextResponse.redirect(new URL('/signin', request.url));
-//         }
-
-//         return NextResponse.next();
-//     } catch (e) {
-//         return NextResponse.next();
-//     }
-// }
-
-
-
-
-
-
-
-
-
 import { NextResponse } from 'next/server';
 import { auth } from './lib/auth'; 
 
 export async function proxy(request) {
     try {
+       
         const session = await auth.api.getSession({
             headers: request.headers 
         });
 
-        const { pathname } = request.nextUrl;
-
-        // এখানে pathname.startsWith('/all-tiles/') যোগ করা হয়েছে যাতে View Details পেজটিও লক হয়
-        if (!session && (pathname === '/profile' || pathname === '/all-tiles' || pathname.startsWith('/all-tiles/'))) {
+        if (!session && (request.nextUrl.pathname === '/profile' || request.nextUrl.pathname === '/all-tiles')) {
             return NextResponse.redirect(new URL('/signin', request.url));
         }
 
@@ -82,10 +52,40 @@ export async function proxy(request) {
     }
 }
 
-export const config = {
-    matcher: [
-        '/profile', 
-        '/all-tiles',
-        '/all-tiles/:path*' // এটি নিশ্চিত করে যে /all-tiles/id পাথেও এই চেকটি চলবে
-    ],
-};
+
+
+
+
+
+
+
+
+// import { NextResponse } from 'next/server';
+// import { auth } from './lib/auth'; 
+
+// export async function proxy(request) {
+//     try {
+//         const session = await auth.api.getSession({
+//             headers: request.headers 
+//         });
+
+//         const { pathname } = request.nextUrl;
+
+        
+//         if (!session && (pathname === '/profile' || pathname === '/all-tiles' || pathname.startsWith('/all-tiles/'))) {
+//             return NextResponse.redirect(new URL('/signin', request.url));
+//         }
+
+//         return NextResponse.next();
+//     } catch (e) {
+//         return NextResponse.next();
+//     }
+// }
+
+// export const config = {
+//     matcher: [
+//         '/profile', 
+//         '/all-tiles',
+//         '/all-tiles/:path*' 
+//     ],
+// };
