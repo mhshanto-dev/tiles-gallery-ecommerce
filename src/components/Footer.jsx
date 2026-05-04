@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Input, Label } from "react-aria-components";
 import { FaFacebookF, FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Button, TextField } from '@heroui/react';
 
 const Footer = () => {
   return (
@@ -66,6 +68,23 @@ const Footer = () => {
                 <FaLinkedinIn />
               </Link>
             </div>
+           <div className="flex flex-col gap-4">
+  <h2 className="text-xl font-bold">Join Community</h2>
+  <p className="text-gray-400">Get updates on new patterns.</p>
+  
+  <div className="flex w-full max-w-sm items-center space-x-2">
+    <Input 
+      name="email" 
+      type="email" 
+      placeholder="Email" 
+      className="rounded-lg bg-[#1a1f2e] border-gray-700" 
+    />
+    <Button type="submit" className="bg-indigo-600 hover:bg-indigo-700 rounded-lg">
+      Join
+    </Button>
+  </div>
+</div>
+
           </div>
         </div>
 
