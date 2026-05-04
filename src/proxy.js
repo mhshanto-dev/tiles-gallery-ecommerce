@@ -31,7 +31,33 @@
 
 
 
-// src/proxy.js
+
+// import { NextResponse } from 'next/server';
+// import { auth } from './lib/auth'; 
+
+// export async function proxy(request) {
+//     try {
+       
+//         const session = await auth.api.getSession({
+//             headers: request.headers 
+//         });
+
+//         if (!session && (request.nextUrl.pathname === '/profile' || request.nextUrl.pathname === '/all-tiles')) {
+//             return NextResponse.redirect(new URL('/signin', request.url));
+//         }
+
+//         return NextResponse.next();
+//     } catch (e) {
+//         return NextResponse.next();
+//     }
+// }
+
+
+
+
+
+
+
 import { NextResponse } from 'next/server';
 import { auth } from './lib/auth'; 
 
@@ -42,8 +68,14 @@ export async function proxy(request) {
             headers: request.headers 
         });
 
-        if (!session && (request.nextUrl.pathname === '/profile' || request.nextUrl.pathname === '/all-tiles')) {
-            return NextResponse.redirect(new URL('/signin', request.url));
+        const { pathname } = request.nextUrl;
+
+       
+        if (!session) {
+            if (pathname === '/profile' || pathname.startsWith('/all-tiles')) {
+                
+                return NextResponse.redirect(new URL('/Signin', request.url));
+            }
         }
 
         return NextResponse.next();
@@ -51,3 +83,10 @@ export async function proxy(request) {
         return NextResponse.next();
     }
 }
+
+export const config = {
+    matcher: [
+        '/profile', 
+        '/all-tiles/:path*' 
+    ],
+};
